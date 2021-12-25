@@ -1,0 +1,19 @@
+{
+  "name": "giftfor.me",
+  "version": "1.0.0",
+  "description": "Gift keeper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evgarthub/giftfor.me.git"
+  },
+  "author": "Yevhen Kifiak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evgarthub/giftfor.me/issues"
+  },
+  "homepage": "https://github.com/evgarthub/giftfor.me#readme"
+}

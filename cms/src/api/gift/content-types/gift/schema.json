@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gifts",
+  "info": {
+    "singularName": "gift",
+    "pluralName": "gifts",
+    "displayName": "Gift"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "note": {
+      "type": "text"
+    },
+    "amount": {
+      "type": "integer",
+      "default": 1,
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "prio": {
+      "type": "enumeration",
+      "enum": [
+        "veryHigh",
+        "high",
+        "medium",
+        "low",
+        "veryLow"
+      ],
+      "default": "medium",
+      "required": true
+    },
+    "url": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "string",
+      "required": false
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "reserved",
+        "gifted"
+      ],
+      "default": "new",
+      "required": true
+    },
+    "type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::type.type",
+      "inversedBy": "gifts"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "gifts"
+    }
+  }
+}
